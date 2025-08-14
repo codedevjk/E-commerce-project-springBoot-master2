@@ -1,0 +1,14 @@
+{
+  "name": "ecommerce-fullstack",
+  "version": "1.0.0",
+  "description": "Full-stack ecommerce application",
+  "scripts": {
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && mvn spring-boot:run",
+    "install-all": "cd frontend && npm install && cd ../backend && mvn clean install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
